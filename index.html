@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/fukushi-nippo-demo/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d9488" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="福祉日報システム（デモ）" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/fukushi-nippo-demo/icons/apple-touch-icon-180x180.png" />
+    <title>福祉日報システム（デモ）</title>
+    <style>
+      #app-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: linear-gradient(135deg, #f0fdfa, #cffafe);
+        transition: opacity 0.3s ease-out;
+      }
+      #app-loading.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #app-loading img {
+        width: 64px;
+        height: 64px;
+        border-radius: 12px;
+      }
+      #app-loading .spinner {
+        width: 28px;
+        height: 28px;
+        border: 3px solid #99f6e4;
+        border-top-color: #0d9488;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      #app-loading .app-name {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #0d9488;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #app-loading .spinner { animation: none; }
+        #app-loading.fade-out { transition: none; }
+      }
+    </style>
+    <script type="module" crossorigin src="/fukushi-nippo-demo/assets/index-Cor4-RTd.js"></script>
+    <link rel="modulepreload" crossorigin href="/fukushi-nippo-demo/assets/vendor-cHLRtDDE.js">
+    <link rel="modulepreload" crossorigin href="/fukushi-nippo-demo/assets/pdf-BP-aj7uf.js">
+    <link rel="stylesheet" crossorigin href="/fukushi-nippo-demo/assets/index-O_q8YF0i.css">
+  </head>
+  <body>
+    <div id="app-loading">
+      <img src="/fukushi-nippo-demo/icons/icon-192x192.png" alt="" width="64" height="64" />
+      <div class="spinner"></div>
+      <div class="app-name">福祉日報システム</div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
